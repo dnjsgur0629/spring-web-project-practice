@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.web.servlet.support.AbstractFlashMapManager"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.support.JstlUtils"/>
+    <fullyQualifiedTypeName name="org.zerock.config.RootConfig"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="javax.lang.model.util.AbstractAnnotationValueVisitor6"/>
+    <fullyQualifiedTypeName name="org.springframework.web.servlet.support.AbstractFlashMapManager"/>
 </qualifiedTypeNameHistroy>

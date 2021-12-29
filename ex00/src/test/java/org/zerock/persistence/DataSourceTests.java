@@ -3,7 +3,6 @@ package org.zerock.persistence;
 import static org.junit.Assert.fail;
 
 import java.sql.Connection;
-import java.sql.SQLException;
 
 import javax.sql.DataSource;
 
