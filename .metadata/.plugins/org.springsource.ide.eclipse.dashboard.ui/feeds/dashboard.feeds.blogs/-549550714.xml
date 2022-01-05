@@ -5,7 +5,49 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2021-12-29T08:00:00Z</updated>
+  <updated>2022-01-04T11:00:00Z</updated>
+  <entry>
+    <title>This Week in Spring (11 year anniversary edition!) - January 4th, 2022</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/01/04/this-week-in-spring-11-year-anniversary-edition-january-4th-2022" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-01-04:4661</id>
+    <updated>2022-01-04T11:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Welcome to another installment of &lt;em&gt;This Week in Spring&lt;/em&gt;, the first in the new year! (Happy new year!) This week also marks the 11th anniversary of &lt;em&gt;This Week in Spring&lt;/em&gt;, which I started writing on the first Tuesday of January 2011 thanks to a great idea from SpringSource co-founder and all-around good-guy &lt;a href="https://twitter.com/kdonald"&gt;Keith Donald (@kdonald)&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;What a run! As always, I just wanna extend a heartfelt thanks to all of you who read (_suffer!_) my rambling writing every week. We&amp;rsquo;ve been lucky, as a community, to have presided over the most amazing and uplifting period in Spring and the JVM&amp;rsquo;s history&amp;hellip; This roundup has reflected that with incredible stuff happening &lt;em&gt;all the time&lt;/em&gt;. Where there&amp;rsquo;s smoke, there&amp;rsquo;s fire. The many blogs, articles, podcasts, YouTube (and ever so occasionally Vimeo) videos, etc., are interesting in themselves, but they also signal interesting developments in the ecosystem, which is even more interesting! Rock on, community! &lt;/p&gt;
+&lt;p&gt;You know, even the number, the numeral itself - 11 - changes things. In English prose, it&amp;rsquo;s customary to spell out numbers that are less than 10. So, &amp;ldquo;one,&amp;rdquo; &amp;ldquo;two,&amp;rdquo; etc. Some style guides include &amp;ldquo;ten,&amp;rdquo; too. But 11, well, I can just &lt;em&gt;write&lt;/em&gt; 11. Who&amp;rsquo;s gonna stop me? The &lt;em&gt;New York Times Style Guide&lt;/em&gt;? Too late, I already checked it!! That&amp;rsquo;s one less grammar grievance, one less &lt;em&gt;style snafu&lt;/em&gt;, if you will, to be found in this blog! You ever pop a zit, pay off a credit (or technical) debt, or clean your house and just felt this overwhelming satisfaction? Like Marie Kondo says, you gotta throw it out if it does not &lt;em&gt;spark joy&lt;/em&gt;. And having to wrangle with the numerals for the number of years of this blog? Well, it definitely did &lt;strong&gt;not&lt;/strong&gt; spark joy.&lt;/p&gt;
+&lt;p&gt;But &lt;em&gt;you&lt;/em&gt; spark joy, my friends. &lt;em&gt;Thank you&lt;/em&gt; again for making this work so valuable. Without community, there&amp;rsquo;s no point in a community roundup, is there? &lt;em&gt;You&lt;/em&gt; are the reason for the season (Spring)! So, as always, I&amp;rsquo;m happy to hear about the latest-and-greatest that you feel worthy of inclusion: hit me up anytime (&lt;a href="https://twitter.com/starbuxman"&gt;@starbuxman&lt;/a&gt;) or &lt;a href="mailto:josh@joshlong.com"&gt;&lt;a href="mailto:&amp;#106;&amp;#111;&amp;#115;&amp;#x68;&amp;#64;j&amp;#x6f;&amp;#115;&amp;#104;&amp;#x6c;&amp;#111;&amp;#x6e;&amp;#103;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;"&gt;&amp;#106;&amp;#111;&amp;#115;&amp;#x68;&amp;#64;j&amp;#x6f;&amp;#115;&amp;#104;&amp;#x6c;&amp;#111;&amp;#x6e;&amp;#103;&amp;#46;&amp;#99;&amp;#x6f;&amp;#x6d;&lt;/a&gt;&lt;/a&gt;! &lt;/p&gt;
+&lt;p&gt;And now, without further ado, let&amp;rsquo;s get to this week&amp;rsquo;s roundup! &lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;I love this! MyBatis Spring committer Kazuki Shimizu has created &lt;a href="https://github.com/kazuki43zoo/mybatis-spring-native"&gt;a prototypical Spring Native integration for MyBatis here&lt;/a&gt;.&lt;/li&gt;
+  &lt;li&gt;In last week&amp;rsquo;s installment of &lt;em&gt;A Bootiful Podcast&lt;/em&gt;, &lt;a href="https://spring.io/blog/2021/12/30/a-bootiful-podcast-geertjan-wielenga-senior-director-of-opensource-projects-at-azul-systems-and-foojay-io-founder"&gt;I talked to Geertjan Wielenga, senior director of opensource projects at Azul Systems and Foojay.io founder&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://thecodeshewrites.wordpress.com/2021/11/26/deploying-a-java-spring-boot-angular-application-in-the-cloud-comparison-of-the-providers/"&gt;Deploying a Java-Spring Boot-Angular application in the Cloud: comparison of the providers&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Want to use GraalVM on Github Actions? There&amp;rsquo;s &lt;em&gt;Action&lt;/em&gt; for that! &lt;a href="https://github.com/marketplace/actions/github-action-for-graalvm"&gt;GitHub Action for GraalVM - GitHub Marketplace&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://spring.io/blog/2021/12/29/go-go-graalvm-with-spring-native-my-adventures-in-native-image-ville"&gt;Go, Go, GraalVM with Spring Native: My Adventures in Native Image-ville&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://blog.jooq.org/how-to-customise-a-jooq-configuration-that-is-injected-using-spring-boot/"&gt;How to customise a jOOQ Configuration that is injected using Spring Boot&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://vladmihalcea.com/keyset-pagination-spring/"&gt;Keyset Pagination with Spring&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://vladmihalcea.com/custom-spring-data-repository/"&gt;The best way to write a custom Spring Data Repository&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://piotrminkowski.com/2021/12/30/vault-on-kubernetes-with-spring-cloud/"&gt;Vault on Kubernetes with Spring Cloud - Piotr&amp;rsquo;s TechBlog&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://www.infoq.com/news/2021/12/minecrafts-jdk16-migration/?utm_campaign=infoq_content&amp;utm_source=twitter&amp;utm_medium=feed&amp;utm_term=java"&gt;End Of Year Learnings From Minecraft¡¯s Migration To JDK 16 And Q&amp;amp;A with the Mojang Team &lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>A Bootiful Podcast: Geertjan Wielenga, senior director of opensource projects at Azul Systems and Foojay.io founder</title>
+    <link rel="alternate" href="https://spring.io/blog/2021/12/30/a-bootiful-podcast-geertjan-wielenga-senior-director-of-opensource-projects-at-azul-systems-and-foojay-io-founder" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2021-12-31:4660</id>
+    <updated>2021-12-30T10:25:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks (again!) to &lt;a href="https://twitter.com/java"&gt;Java&lt;/a&gt; ecosystem legend and senior director of opensource projects at &lt;a href="https://twitter.com/AzulSystems"&gt;Azul Systems&lt;/a&gt;, &lt;a href="https://twitter.com/GeertjanW"&gt;Geertjan Wielenga (@GeertjanW)&lt;/a&gt;. &lt;/p&gt;
+&lt;p&gt;Happy new year, everyone! &lt;/p&gt;
+&lt;iframe title="Geertjan Wielenga, senior director of opensource projects at Azul Systems and Foojay.io founder" allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=u8whw-1168d85-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;btn-skin=7"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Go, Go, GraalVM with Spring Native: My Adventures in Native Image-ville</title>
     <link rel="alternate" href="https://spring.io/blog/2021/12/29/go-go-graalvm-with-spring-native-my-adventures-in-native-image-ville" />
@@ -30,7 +72,7 @@ public interface CityMapper {&#xD;
 	Collection&amp;lt;City&amp;gt; findAll();&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a href="#spring-retrosocket-and-spring-native" class="anchor" name="spring-retrosocket-and-spring-native"&gt;&lt;/a&gt;Spring Retrosocket and Spring Native&lt;/h3&gt;
-&lt;p&gt;I also updated the &lt;a href="https://github.com/spring-projects-experimental/spring-retrosocket"&gt;Spring Retrosocket&lt;/a&gt; project to work with Spring Native](&lt;a href="https://github.com/spring-projects-experimental/spring-retrosocket)"&gt;https://github.com/spring-projects-experimental/spring-retrosocket)&lt;/a&gt;. Spring Retrosocket is a declarative &lt;a href="https://github.com/OpenFeign/feign"&gt;Feign&lt;/a&gt;- or &lt;a href="https://square.github.io/retrofit/"&gt;Retrofit&lt;/a&gt;-like client for RSocket-based services.&lt;/p&gt;
+&lt;p&gt;I also updated the &lt;a href="https://github.com/spring-projects-experimental/spring-retrosocket"&gt;Spring Retrosocket&lt;/a&gt; project to work with &lt;a href="https://github.com/spring-projects-experimental/spring-retrosocket"&gt;Spring Native&lt;/a&gt;. Spring Retrosocket is a declarative &lt;a href="https://github.com/OpenFeign/feign"&gt;Feign&lt;/a&gt;- or &lt;a href="https://square.github.io/retrofit/"&gt;Retrofit&lt;/a&gt;-like client for RSocket-based services.&lt;/p&gt;
 &lt;pre&gt;&lt;code class="prettyprint java"&gt;@RSocketClient&#xD;
 interface GreetingsClient {&#xD;
 &#xD;
@@ -38,7 +80,9 @@ interface GreetingsClient {&#xD;
 	Mono&amp;lt;String&amp;gt; hello(Mono&amp;lt;String&amp;gt; name);&#xD;
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a href="#the-kubernetes-java-client-and-spring-native" class="anchor" name="the-kubernetes-java-client-and-spring-native"&gt;&lt;/a&gt;The Kubernetes Java Client and Spring Native&lt;/h3&gt;
-&lt;p&gt;Then, I turned my attention to making the Kubernetes Java client work well in a Spring Native and GraalVM context. The Kubernetes Java client is essential if you want to build memory-efficient controllers and operators for Kubernetes. Did I mention that GraalVM native images are &lt;em&gt;very&lt;/em&gt; memory efficient? It depends on what you&amp;rsquo;re doing in your application, of course, but my typical applications end up taking anywhere from 40 to 55 megabytes of RAM (well, &lt;a href="https://en.wikipedia.org/wiki/Resident_set_size"&gt;RSS&lt;/a&gt;, specifically). And that&amp;rsquo;s in addition to startup in only tens of milliseconds. The official Kubernetes-for-Java client has a Spring Boot autoconfiguration. So all I had to do was write the &lt;a href="https://github.com/kubernetes-native-java/spring-native-kubernetes/blob/main/src/main/java/io/kubernetes/nativex/KubernetesApiNativeConfiguration.java"&gt;trivial Spring Native configuration&lt;/a&gt; required to make such applications work well in a Spring Native and GraalVM context. &lt;a href="https://joshlong.com/jl/blogPost/kubernetes-java-client-and-spring-native-and-graalvm.html"&gt;I explain it here&lt;/a&gt; in detail. Suffice it to say it&amp;rsquo;s now possible to use your favorite development framework not just to build excellent Kubernetes resources and controllers but deploy them in a low-footprint fashion to your organization&amp;rsquo;s clusters.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-graphql-and-spring-native" class="anchor" name="spring-graphql-and-spring-native"&gt;&lt;/a&gt;Spring GraphQL and Spring Native&lt;/h3&gt;
+&lt;p&gt;Then, I turned my attention to making the Kubernetes Java client work well in a Spring Native and GraalVM context. The Kubernetes Java client is essential if you want to build memory-efficient controllers and operators for Kubernetes. Did I mention that GraalVM native images are &lt;em&gt;very&lt;/em&gt; memory efficient? It depends on what you&amp;rsquo;re doing in your application, of course, but my typical applications end up taking anywhere from 40 to 55 megabytes of RAM (well, &lt;a href="https://en.wikipedia.org/wiki/Resident_set_size"&gt;RSS&lt;/a&gt;, specifically). And that&amp;rsquo;s in addition to startup in only tens of milliseconds. The official Kubernetes-for-Java client has a Spring Boot autoconfiguration. So all I had to do was write the &lt;a href="https://github.com/kubernetes-native-java/spring-native-kubernetes/blob/main/src/main/java/io/kubernetes/nativex/KubernetesApiNativeConfiguration.java"&gt;trivial Spring Native configuration&lt;/a&gt; required to make such applications work well in a Spring Native and GraalVM context. &lt;a href="https://joshlong.com/jl/blogPost/kubernetes-java-client-and-spring-native-and-graalvm.html"&gt;I explain it here&lt;/a&gt; in detail. Suffice it to say it&amp;rsquo;s now possible to use your favorite development framework not just to build excellent Kubernetes resources and controllers but deploy them in a low-footprint fashion to your organization&amp;rsquo;s clusters. &lt;/p&gt;&lt;h3&gt;&lt;a href="#fabric8-and-spring-native" class="anchor" name="fabric8-and-spring-native"&gt;&lt;/a&gt;Fabric8 and Spring Native&lt;/h3&gt;
+&lt;p&gt;Speaking of Kubernetes clients, I also got RedHat&amp;rsquo;s fabulous &lt;a href="https://fabric8.io"&gt;Fabric8.io Kubernetes client&lt;/a&gt; working with &lt;a href="https://github.com/kubernetes-native-java/fabric8-spring-native"&gt;Spring Native, too&lt;/a&gt;. I found a lovely example operator and custom resource definition that I then made work using my &lt;a href="https://github.com/kubernetes-native-java/fabric8-sample-controller"&gt;Fabric8 Spring Native hints&lt;/a&gt;. This is a more fully-featured example, and it works a charm. This was based on a fabulous example by Rohan Kanojia that I found and adapted to use Spring Boot and Spring Native. &lt;/p&gt;
+&lt;p&gt;This approach has legs! Between Spring Native and the official Kubernetes Java client and the Fabric8 client, there&amp;rsquo;s no reason not to use Spring Boot to build your next Kubernetes operator. &lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-graphql-and-spring-native" class="anchor" name="spring-graphql-and-spring-native"&gt;&lt;/a&gt;Spring GraphQL and Spring Native&lt;/h3&gt;
 &lt;p&gt;Then, I turned my attention to Spring GraphQl and Spring Native. Spring GraphQL works pretty well as long as you override how the &lt;code&gt;GraphQlSourceBuilder&lt;/code&gt; derives the Spring Framework &lt;code&gt;Resource&lt;/code&gt; instances used to feed the engine the schema for your GraphQL endpoints. It&amp;rsquo;s not as easy as it could be, but it&amp;rsquo;s still only an extra &lt;code&gt;@Bean&lt;/code&gt; or two or so lines of code to make it work. Fine. The trouble starts when you&amp;rsquo;re using Spring GraphQL and want to query the metamodel for Spring GraphQL&amp;rsquo;s schema itself. Having the GraphQL metamodel is convenient when, for example, you&amp;rsquo;re using the &lt;code&gt;/graphiql/&lt;/code&gt; interactive console to query the data. &lt;em&gt;That&lt;/em&gt; took some doing, but I did it. I explain &lt;a href="https://joshlong.com/jl/blogPost/spring-graphql-and-spring-native.html"&gt;that further in this post&lt;/a&gt;. &lt;/p&gt;
 &lt;p&gt;With that, I can deploy a GraphQL controller like this:&lt;/p&gt;
 &lt;pre&gt;&lt;code class="prettyprint java"&gt;&lt;br/&gt;@Controller&#xD;
@@ -75,8 +119,8 @@ type Customer {&#xD;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;And get the results I was expecting! &lt;/p&gt;&lt;h3&gt;&lt;a href="#miscellaneous" class="anchor" name="miscellaneous"&gt;&lt;/a&gt;Miscellaneous&lt;/h3&gt;
 &lt;p&gt;I&amp;rsquo;ve also been dealing with many other things I wanted to get working with Spring Native. So here&amp;rsquo;s the Spring Native configuration for &lt;a href="https://github.com/joshlong/template-spring-boot-starter/blob/master/src/main/java/com/joshlong/templates/graalvm/TemplateNativeConfiguration.java"&gt;CommonMark, a Markdown parser in Java&lt;/a&gt;. &lt;/p&gt;
-&lt;p&gt;Here are the various classes I had to add to make Apache Lucene work in a Spring Native project. Of course, this example is more involved and uses GraalVM substitutions and a typical Spring Native configuration. But it works, and well, too! &lt;/p&gt;
-&lt;p&gt;Oh, and did I mention I worked with Ronald Dehuysser to get Jobrunr, a distributed job scheduling engine, working in a GraalVM context with Spring Native? Because I did, and the result is &lt;em&gt;awesome&lt;/em&gt;! &lt;/p&gt;
+&lt;p&gt;Here are the various classes I had to add to make &lt;a href="https://github.com/joshlong/lucene-spring-boot-starter/tree/master/lucene-spring-boot-starter"&gt;Apache Lucene&lt;/a&gt; work in a Spring Native project. Of course, this example is more involved and uses&lt;a href="https://simply-how.com/fix-graalvm-native-image-compilation-issues"&gt;GraalVM substitutions&lt;/a&gt; and a typical Spring Native configuration. But it works, and well, too! &lt;/p&gt;
+&lt;p&gt;Oh, and did I mention I worked with &lt;a href="https://twitter.com/rdehuyss"&gt;Ronald Dehuysser&lt;/a&gt; to get &lt;a href="https://jobrunr.io"&gt;Jobrunr&lt;/a&gt;, a distributed job scheduling engine, working in a GraalVM context with Spring Native? Because I did, and the result is &lt;em&gt;awesome&lt;/em&gt;! &lt;/p&gt;
 &lt;p&gt;I&amp;rsquo;ve done all this in just the last few weeks: the possibilities are endless, and I can&amp;rsquo;t wait to see more and more of the wide and world of Springdom sprout GraalVM integrations. &lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
@@ -2846,87 +2890,6 @@ dependencies {&#xD;
   &lt;li&gt;&lt;a href="https://twitter.com/VMware/status/1468962596879417355"&gt; This is a great, video overview of VMware¡¯s free, open-source Kubernetes distro, the Tanzu Community Edition. &lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;A nice report on the Microsoft Tech Community: &lt;a href="https://techcommunity.microsoft.com/t5/apps-on-azure-blog/2021-report-how-developers-migrate-spring-apps-to-the-cloud/ba-p/3021421"&gt;How developers migrate Spring apps to the cloud&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Square 0.4.0-RC1 is available</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/12/14/spring-cloud-square-0-4-0-rc1-is-available" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Olga Maciaszek-Sharma</name>
-    </author>
-    <id>tag:spring.io,2021-12-14:4640</id>
-    <updated>2021-12-14T18:24:22Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the community, I am pleased to announce that the Release Candidate 1 (RC1) of the &lt;a href="https://cloud.spring.io"&gt;Spring Cloud Square&lt;/a&gt; 0.4.0 is available today. The release can be found in &lt;a href="https://repo.spring.io/milestone/"&gt;Spring Milestone&lt;/a&gt; repository. You can check out the 0.4.0-RC1 &lt;a href="https://github.com/spring-projects-experimental/spring-cloud-square/releases/tag/v0.4.0-RC1"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This is primarily a bugfix release. See all issues included in this release &lt;a href="https://github.com/spring-projects-experimental/spring-cloud-square/milestone/2?closed=1"&gt;here&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-rc1" class="anchor" name="notable-changes-in-rc1"&gt;&lt;/a&gt;Notable changes in RC1:&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Cloud Sleuth integration for OkHttpClient &lt;a href="https://github.com/spring-projects-experimental/spring-cloud-square/issues/36"&gt;#36&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The documentation for this milestone can be found &lt;a href="https://spring-projects-experimental.github.io/spring-cloud-square/docs/current/reference/html/index.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring GraphQL 1.0.0-M4 Released</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/12/14/spring-graphql-1-0-0-m4-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Brian Clozel</name>
-    </author>
-    <id>tag:spring.io,2021-12-14:4641</id>
-    <updated>2021-12-14T16:04:00Z</updated>
-    <content type="html">&lt;p&gt;The Spring GraphQL team has just released the 4th milestone towards a 1.0.0 release. Thanks to all contributors!&lt;/p&gt;
-&lt;p&gt;In this milestone, we have further improved the annotation programming model and extended the Spring Data support that were provided &lt;a href="https://spring.io/blog/2021/10/28/spring-graphql-1-0-0-m3-released"&gt;in the previous milestones&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#interface-projections-for-graphql-arguments" class="anchor" name="interface-projections-for-graphql-arguments"&gt;&lt;/a&gt;Interface Projections for GraphQL Arguments&lt;/h2&gt;
-&lt;p&gt;If you&amp;rsquo;re familiar with Spring Data&amp;rsquo;s &lt;a href="https://docs.spring.io/spring-data/commons/docs/current/reference/html/#projections.interfaces"&gt;Interface-based Projections&lt;/a&gt;, then this new feature will make perfect sense: you can use a well-defined interface to work with GraphQL arguments, without the need for any Object implementation. &lt;/p&gt;
-&lt;p&gt;For example:&lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Controller&#xD;
-public class BookController {&#xD;
-&#xD;
-    @MutationMapping&#xD;
-    public Book addBook(@Argument BookInputProjection bookInput) {&#xD;
-        // ...&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-@ProjectedPayload&#xD;
-interface BookInputProjection {&#xD;
-&#xD;
-    String getName();  // this maps to &amp;quot;name&amp;quot; argument&#xD;
-&#xD;
-    @Value(&amp;quot;#{target.author + &amp;#39; &amp;#39; + target.name})&#xD;
-    String getAuthorAndName();&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;You can learn more about this in the &lt;a href="https://docs.spring.io/spring-graphql/docs/1.0.0-M4/reference/html/#controllers-schema-mapping-projectedpayload-argument"&gt;@ProjectedPayload Interface&lt;/a&gt; section of the documentation.&lt;/p&gt;&lt;h2&gt;&lt;a href="#query-by-example-support" class="anchor" name="query-by-example-support"&gt;&lt;/a&gt;Query By Example Support&lt;/h2&gt;
-&lt;p&gt;Spring GraphQL now supports use of the Query by Example, Spring Data, extension for data fetching. To use this extension, you don&amp;rsquo;t need to write queries through store-specific query languages, but simply provide an example of a domain object with populated fields. The repository implementation will do the rest!&lt;/p&gt;
-&lt;p&gt;The &lt;code&gt;QueryByExampleDataFetcher&lt;/code&gt; makes it easy to create a &lt;code&gt;DataFetcher&lt;/code&gt; that binds GraphQL arguments onto an example object and then uses that to query for the data. There is also a feature for automated discovery of Query By Example repositories, based on the &lt;code&gt;@GraphQlRepository&lt;/code&gt; annotation, and mapping to top-level GraphQL queries.&lt;/p&gt;
-&lt;p&gt;If your data store of choice supports it, this adds another way to leverage your Spring Data repositories in a Spring GraphQL application. See &lt;a href="https://docs.spring.io/spring-graphql/docs/1.0.0-M4/reference/html/#data-querybyexample"&gt;the documentation&lt;/a&gt; for more details.&lt;/p&gt;&lt;h2&gt;&lt;a href="#standard-bean-validation-for-graphql-arguments" class="anchor" name="standard-bean-validation-for-graphql-arguments"&gt;&lt;/a&gt;Standard Bean Validation for GraphQL Arguments&lt;/h2&gt;
-&lt;p&gt;On top of the existing constraints enforced at the schema level, you can now use Standard Bean Validation to validate GraphQL arguments that are declared as controller method parameters. If the argument doesn&amp;rsquo;t match the defined constraints, a validation exception is thrown and written to the relevant &amp;ldquo;errors&amp;rdquo; section of the GraphQL response. &lt;/p&gt;
-&lt;pre&gt;&lt;code class="prettyprint java"&gt;@Controller&#xD;
-public class BookController {&#xD;
-&#xD;
-    @MutationMapping&#xD;
-    public Book addBook(@Argument @Valid BookInput bookInput) {&#xD;
-        // ...&#xD;
-    }&#xD;
-}&#xD;
-&#xD;
-public class BookInput {&#xD;
-&#xD;
-    @NotNull&#xD;
-    private String title;&#xD;
-&#xD;
-    @NotNull&#xD;
-    @Size(max=13)&#xD;
-    private String isbn;&#xD;
-}
-&lt;/code&gt;&lt;/pre&gt;
-&lt;p&gt;This is similar to the existing support in Spring MVC or Spring WebFlux, you can &lt;a href="https://docs.spring.io/spring-graphql/docs/1.0.0-M4/reference/html/#controllers-schema-mapping-validation"&gt;learn more about &lt;code&gt;@Argument&lt;/code&gt; validation&lt;/a&gt; in the reference docs.&lt;/p&gt;&lt;h3&gt;&lt;a href="#context-access" class="anchor" name="context-access"&gt;&lt;/a&gt;Context Access&lt;/h3&gt;
-&lt;p&gt;A new &lt;code&gt;@ContextValue&lt;/code&gt; annotation provides convenient access to values in the &lt;code&gt;GraphQLContext&lt;/code&gt; from controller methods.&lt;/p&gt;
-&lt;p&gt;Controller methods can access the authenticated user by declaring a method argument of type &lt;code&gt;javax.security.Principal&lt;/code&gt;. &lt;/p&gt;
-&lt;p&gt;&lt;code&gt;@BatchMapping&lt;/code&gt; methods can access the same &lt;code&gt;GraphQLContext&lt;/code&gt; that is also available for &lt;code&gt;@SchemaMapping&lt;/code&gt; methods and to any &lt;code&gt;DataFetcher&lt;/code&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#more" class="anchor" name="more"&gt;&lt;/a&gt;More&lt;/h3&gt;
-&lt;p&gt;More &lt;a href="https://github.com/spring-projects/spring-graphql/milestone/5?closed=1"&gt;improvements and fixes made their way into their release&lt;/a&gt; and they&amp;rsquo;re available right now in the new Spring GraphQL 1.0.0-M4 release from the Spring Milestone repository.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
-&lt;p&gt;If you&amp;rsquo;re interested in helping out, you can &lt;a href="https://docs.spring.io/spring-graphql/docs/1.0.0-M4/reference/html/#boot-graphql"&gt;get started with Spring GraphQL&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-graphql/issues"&gt;raise issues on our GitHub project&lt;/a&gt;.&lt;br/&gt;If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-graphql"&gt;&lt;code&gt;spring-graphql&lt;/code&gt; tag&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://spring.io/projects/spring-graphql/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-graphql"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-graphql/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-graphql/docs/1.0.0-M4/reference/html/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-graphql"&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
