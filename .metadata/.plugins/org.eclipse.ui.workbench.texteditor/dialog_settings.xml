@@ -1,19 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="basic"/>
+		<item key="selection" value="BoardMapperTests"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
-			<item value="basic"/>
+			<item value="BoardMapperTests"/>
+			<item value="Board"/>
+			<item value="sele"/>
+			<item value="selc"/>
+			<item value="selct"/>
+			<item value="ju"/>
+			<item value="facet"/>
+			<item value="junit"/>
 			<item value="servlet"/>
-			<item value="plugin"/>
-			<item value="springframework"/>
-			<item value="maven spring"/>
-			<item value="maven spring]"/>
+			<item value="servet"/>
+			<item value="log4"/>
+			<item value="myb"/>
+			<item value="Hika"/>
+			<item value="spring"/>
+			<item value="maven"/>
 		</list>
 		<list key="replacehistory">
 		</list>
