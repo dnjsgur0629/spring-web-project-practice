@@ -52,7 +52,7 @@ public class BoardServiceTests {
 	@Test
 	public void testDelete() {
 		//게시물 번호의 존재여부를 확인하고 테스트
-		log.info("REMOVE RESULT: " + service.remove(43L));
+		log.info("REMOVE RESULT: " + service.remove(44L));
 	}
 
 	
