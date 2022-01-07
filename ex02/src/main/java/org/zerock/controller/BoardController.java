@@ -41,6 +41,10 @@ public class BoardController {
 		return "redirect:/board/list";
 	}
 	
+	@GetMapping("/register")		//입력 페이지를 보여주는 역할만
+	public void register() {
+	}
+	
 	@GetMapping("/get")
 	public void get(@RequestParam("bno") Long bno, Model model) {
 		
