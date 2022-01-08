@@ -15,11 +15,8 @@
 <div class="row">
     <div class="col-lg-12">
         <div class="panel panel-default">
-            <div class="panel-heading">
-               	Board List Page
-               	<button id="regBtn" type="button" class="btn btn-xs pull-right">
-               		Register New Board
-               	</button>
+            <div class="panel-heading"> Board List Page
+               	<button id='regBtn' type="button" class="btn btn-xs pull-right">Register New Board</button>
             </div>
             <!-- /.panel-heading -->
             <div class="panel-body">
@@ -48,27 +45,29 @@
                     
                 </table>
 				<!-- end table -->
-				<!-- Modal 추가 -->
-				<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
-							aria-labelledby="myModalLabel" aria-hidden="true">
-					<div class="modal-dialog">
-						<div class="modal-content">
-							<div class="modal-header">
-								<button type="button" class="close" data-dismiss="modal"
-										aria-hidden="true">&times;</button>
-								<h4 class="modal-title" id="myModalLabel">Modal title</h4>
-							</div>
-							<div class="modal-body">처리가 완료되었습니다.</div>
-							<div class="modal-footer">
-								<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-								<button type="button" class="btn btn-primary">Save changes</button>
-							</div>
+				<!-- Modal  추가 -->
+			<div class="modal fade" id="myModal" tabindex="-1" role="dialog"
+				aria-labelledby="myModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal"
+								aria-hidden="true">&times;</button>
+							<h4 class="modal-title" id="myModalLabel">Modal title</h4>
 						</div>
-						<!-- modal-content -->
+						<div class="modal-body">처리가 완료되었습니다.</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default"
+								data-dismiss="modal">Close</button>
+							<button type="button" class="btn btn-primary">Save
+								changes</button>
+						</div>
 					</div>
-					<!-- modal-dialog -->			
+					<!-- /.modal-content -->
 				</div>
-				<!-- modal -->
+				<!-- /.modal-dialog -->
+			</div>
+			<!-- /.modal -->
             </div>
             <!-- end panel-body -->
         </div>
@@ -85,11 +84,11 @@ $(document).ready(function(){
 	
 	checkModal(result)
 	
-	history.replaceState({},null,null);
+	//history.replaceState({},null,null);
 	
 	function checkModal(result){
 		
-		if(result === ''||history.state){
+		if(result === ''){
 			return;
 		}
 		
@@ -100,8 +99,10 @@ $(document).ready(function(){
 		$("#myModal").modal("show");
 	}
 	
-	$("#regBtn").on("click", function(){
+	$("#regBtn").on("click", function() {
+
 		self.location = "/board/register";
+
 	});
 	
 /});
