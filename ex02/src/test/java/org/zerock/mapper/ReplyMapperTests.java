@@ -54,7 +54,7 @@ public class ReplyMapperTests {
 	@Test
 	public void testDelete() {
 		
-		Long targetRno = 1L;
+		Long targetRno = 5L;
 		
 		mapper.delete(targetRno);
 	}
@@ -62,7 +62,7 @@ public class ReplyMapperTests {
 	@Test
 	public void testUpdate() {
 		
-		Long targetRno = 10L;
+		Long targetRno = 11L;
 		
 		ReplyVO vo = mapper.read(targetRno);
 		
@@ -80,6 +80,16 @@ public class ReplyMapperTests {
 		
 		// 8650795L
 		List<ReplyVO> replies = mapper.getListWithPaging(cri, bnoArr[0]);
+		
+		replies.forEach(reply -> log.info(reply));
+	}
+	
+	@Test
+	public void testList2() {
+		
+		Criteria cri = new Criteria(1,10);
+
+		List<ReplyVO> replies = mapper.getListWithPaging(cri, 8650795L);
 		
 		replies.forEach(reply -> log.info(reply));
 	}
