@@ -5,7 +5,20 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-01-13T12:35:00Z</updated>
+  <updated>2022-01-13T21:00:00Z</updated>
+  <entry>
+    <title>A Bootiful Podcast: Spring Cloud Data Flow legend Sabby Anandan</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/01/13/a-bootiful-podcast-spring-cloud-data-flow-legend-sabby-anandan" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-01-13:4667</id>
+    <updated>2022-01-13T21:00:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Spring Cloud Data Flow legend &lt;a href="https://twitter.com/sabbyanandan"&gt;Sabby Anandan (@sabbyanandan)&lt;/a&gt;.&lt;/p&gt;
+&lt;iframe title="Spring Cloud Data Flow legend Sabby Anandan " allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=ric9f-117abfa-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;btn-skin=7"&gt;&lt;/iframe&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>Spring Framework 6.0.0-M2 and 5.3.15 available now</title>
     <link rel="alternate" href="https://spring.io/blog/2022/01/13/spring-framework-6-0-0-m2-and-5-3-15-available-now" />
@@ -2771,19 +2784,6 @@ import ReactDOM from 'react-dom';&lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;/div&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>A Bootiful Podcast: Ronald Dehuysser, Creator of the Distributed Job Scheduler JobRunr</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/12/16/a-bootiful-podcast-ronald-dehuysser-creator-of-the-distributed-job-scheduler-jobrunr" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2021-12-17:4647</id>
-    <updated>2021-12-17T00:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, Josh Long talks to JobRunr.io creator &lt;a href="https://twitter.com/rdehuyss"&gt;Ronald Dehuysser (@rdehuyss)&lt;/a&gt; about &lt;a href="https://www.jobrunr.io"&gt;JobRunr&lt;/a&gt;, which is a distributed job scheduling engine that plugs right into Spring Boot. &lt;/p&gt;
-&lt;iframe title="Ronald Dehuysser, Creator of the Distributed Job Scheduler JobRunr" allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=3tr4c-1159863-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;btn-skin=7"&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
