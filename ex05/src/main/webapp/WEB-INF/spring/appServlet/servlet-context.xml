@@ -23,6 +23,13 @@
 	
 	<context:component-scan base-package="org.zerock.controller" />
 	
+	<resources location="/resource/" mapping="/resource/**"></resources>
+	
+	<beans:bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<beans:property name="prefix" value="/WEB-INF/views/"></beans:property>
+		<beans:property name="suffix" value=".jsp"></beans:property>
+	</beans:bean>
+	
 	<beans:bean id="multipartResolver" 
 		class="org.springframework.web.multipart.support.StandardServletMultipartResolver">
 	</beans:bean>
