@@ -5,7 +5,117 @@
   <link rel="self" href="https://spring.io/blog.atom" />
   <id>http://spring.io/blog.atom</id>
   <icon>https://spring.io/favicon.ico</icon>
-  <updated>2022-01-18T20:00:00Z</updated>
+  <updated>2022-01-19T23:43:00Z</updated>
+  <entry>
+    <title>Spring Batch 5.0 M1 released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/01/19/spring-batch-5-0-m1-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Mahmoud Ben Hassine</name>
+    </author>
+    <id>tag:spring.io,2022-01-19:4676</id>
+    <updated>2022-01-19T23:43:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who contributed, I am pleased to announce that the first milestone release of Spring Batch 5.0 is available now from &lt;a href="https://repo.spring.io/milestone"&gt;https://repo.spring.io/milestone&lt;/a&gt;. This first milestone includes a number of major changes such as requiring Java 17+, migrating to Jakarta EE 9 APIs as well as upgrading our dependencies across the portfolio to major versions such as Spring Framework 6.0. For a complete list of changes, please check the &lt;a href="https://github.com/spring-projects/spring-batch/releases/tag/5.0.0-M1"&gt;change log&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;We also took the opportunity of this major version to remove deprecated APIs and fix some issues that require non backward compatible changes. The &lt;a href="https://github.com/spring-projects/spring-batch/wiki/Spring-Batch-5.0-Migration-Guide"&gt;migration guide&lt;/a&gt; contains more details about these changes and provides the upgrade instructions.&lt;/p&gt;
+&lt;p&gt;As we continue our work on Spring Batch 5, we look forward to your feedback on this first milestone!&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-batch"&gt;Spring Batch Home&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-batch"&gt;Source on GitHub&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Spring for GraphQL 1.0.0-M5 Released</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/01/19/spring-for-graphql-1-0-0-m5-released" />
+    <category term="releases" label="Releases" />
+    <author>
+      <name>Brian Clozel</name>
+    </author>
+    <id>tag:spring.io,2022-01-18:4673</id>
+    <updated>2022-01-19T15:48:00Z</updated>
+    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I am pleased to announce that Spring for GraphQL &lt;code&gt;1.0.0-M5&lt;/code&gt; is now available from &lt;a href="https://repo.spring.io/milestone"&gt;https://repo.spring.io/milestone&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;The M5 release is a quick follow-on after the feature-rich &lt;a href="https://spring.io/blog/2021/12/14/spring-graphql-1-0-0-m4-released"&gt;M4 release&lt;/a&gt; from December. The main goal for M5 was to move the Boot starter out of the Spring GraphQL repository and into Spring Boot proper, ahead of the first Spring Boot 2.7 milestone this Thursday. In addition to that, as always, there was plenty of feedback leading to a number of refinements and fixes.&lt;/p&gt;&lt;h3&gt;&lt;a href="#spring-boot-graphql-starter" class="anchor" name="spring-boot-graphql-starter"&gt;&lt;/a&gt;Spring Boot GraphQL Starter&lt;/h3&gt;
+&lt;p&gt;The GraphQL starter has moved out of the Spring for GraphQL project repository and into the Spring Boot repository, from where it will be made available in &lt;a href="https://github.com/spring-projects/spring-boot/milestone/235"&gt;the upcoming 2.7.0-M1 release&lt;/a&gt;. Here is the &lt;a href="https://docs.spring.io/spring-boot/docs/2.7.x-SNAPSHOT/reference/html/web.html#web.graphql"&gt;GraphQL section&lt;/a&gt; in the Spring Boot docs.&lt;/p&gt;
+&lt;p&gt;To make the experience easier, the starter is now also available on start.spring.io - &lt;a href="https://start.spring.io/#!type=gradle-project&amp;language=java&amp;platformVersion=2.7.0-SNAPSHOT&amp;packaging=jar&amp;jvmVersion=11&amp;groupId=com.example&amp;artifactId=graphql-sample&amp;name=graphql-sample&amp;description=Demo%20project%20for%20Spring%20for%20GraphQL&amp;packageName=com.example.graphql.sample&amp;dependencies=graphql"&gt;try out this link to create your own GraphQL application&lt;/a&gt;!&lt;/p&gt;&lt;h3&gt;&lt;a href="#web-interception" class="anchor" name="web-interception"&gt;&lt;/a&gt;Web Interception&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;WebInterceptor&lt;/code&gt; instances intercept GraphQL over HTTP or over WebSocket requests.&lt;br/&gt;It allows getting information about the HTTP request or WebSocket handshake and to customize the &lt;code&gt;ExecutionInput&lt;/code&gt; and &lt;code&gt;ExecutionResult&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;This is useful for common use cases with GraphQL such as:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;fetching data from the HTTP request and adding it to the &lt;code&gt;GraphQLContext&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;getting information from the &lt;code&gt;GraphQLContext&lt;/code&gt; after the request and exposing an HTTP response header.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;In this release, the &lt;code&gt;WebInput&lt;/code&gt; and &lt;code&gt;WebOutput&lt;/code&gt; types, which have been available from the beginning, have been reviewed and refactored a bit to make them easier to use. The specific goal was to ensure easy access to the &lt;code&gt;GraphQLContext&lt;/code&gt; for both inbound and for outbound interception. So you can now do the following:&lt;/p&gt;
+&lt;pre&gt;&lt;code class="prettyprint java"&gt;public class CustomHeaderWebInterceptor implements WebInterceptor {&#xD;
+&#xD;
+	@Override&#xD;
+	public Mono&amp;lt;WebOutput&amp;gt; intercept(WebInput input, WebInterceptorChain chain) {&#xD;
+		return chain.next(input).doOnNext(output -&amp;gt; {&#xD;
+			GraphQLContext context = output.getExecutionInput().getGraphQLContext();&#xD;
+			String value = context.get(&amp;quot;...&amp;quot;);&#xD;
+			webOutput.getResponseHeaders().set(&amp;quot;Custom-Header&amp;quot;, value);&#xD;
+		});&#xD;
+	}&#xD;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;h3&gt;&lt;a href="#executionid" class="anchor" name="executionid"&gt;&lt;/a&gt;ExecutionId&lt;/h3&gt;
+&lt;p&gt;On the topic of web interception, it is now also easier to set the &lt;code&gt;ExecutionId&lt;/code&gt; for the GraphQL request&lt;br/&gt;from a &lt;code&gt;WebInterceptor&lt;/code&gt;. &lt;/p&gt;
+&lt;p&gt;In GraphQL Java, it is possible to tag each request with a unique &lt;code&gt;ExecutionId&lt;/code&gt;, which by default is a UUID.&lt;br/&gt;In Spring for GraphQL, we&amp;rsquo;re hooking in a web transport layer id, for example&lt;br/&gt;&lt;a href="https://docs.spring.io/spring-framework/docs/current/reference/html/web-reactive.html#webflux-logging-id"&gt;WebFlux requestId&lt;/a&gt;&lt;br/&gt;which could make it easier to correlate log messages with the Web transport.&lt;/p&gt;
+&lt;p&gt;However, we&amp;rsquo;ve also made changes to make it easier to customize the &lt;code&gt;ExecutionId&lt;/code&gt; through a &lt;code&gt;WebInterceptor&lt;/code&gt;&lt;br/&gt;and it&amp;rsquo;s now also possible to configure your own &lt;code&gt;ExecutionIdProvider&lt;/code&gt; in &lt;code&gt;graphq.GraphQL&lt;/code&gt; that would override&lt;br/&gt;the default id used in Spring GraphQL.&lt;/p&gt;&lt;h3&gt;&lt;a href="#querydsl-and-query-by-example-auto-registration" class="anchor" name="querydsl-and-query-by-example-auto-registration"&gt;&lt;/a&gt;Querydsl and Query By Example Auto-Registration&lt;/h3&gt;
+&lt;p&gt;This release improves how auto-registration is performed for Querydsl and Query by Example for &lt;code&gt;@GraphQlRepository&lt;/code&gt; annotated, Spring Data repositories. The root of the challenge is that auto-registration should apply only if there isn&amp;rsquo;t a &lt;code&gt;DataFetcher&lt;/code&gt; registered for that field and there are multiple ways to register those, as well as to decorate them, as some 3rd libraries do, and that can interfere with the auto-registration.&lt;/p&gt;
+&lt;p&gt;In this milestone, we have switched from using a Schema &lt;code&gt;TypeVisitor&lt;/code&gt; to a &lt;code&gt;WiringFactory&lt;/code&gt; for auto-registration. This should provide a more stable mechanism that works better in a range of scenarios and alongside other libraries.&lt;/p&gt;
+&lt;p&gt;If you want to learn more about Querydsl and Query by Example support, please check the &lt;a href="https://docs.spring.io/spring-graphql/docs/current-SNAPSHOT/reference/html/#data"&gt;documentation&lt;/a&gt;.&lt;/p&gt;&lt;h3&gt;&lt;a href="#graphiql-websocket-support" class="anchor" name="graphiql-websocket-support"&gt;&lt;/a&gt;GraphiQL WebSocket support&lt;/h3&gt;
+&lt;p&gt;Spring for GraphQL ships with &lt;a href="https://github.com/graphql/graphiql#graphiql"&gt;a simple GraphiQL integration&lt;/a&gt;; this tool is not only useful at development time to craft queries and test an API we&amp;rsquo;re building, but also a nice way to explore an API for client developers.&lt;/p&gt;
+&lt;p&gt;While we think that for more specific needs, applications should build their own page, we&amp;rsquo;ve improved our default experience to include WebSocket support. You can now test subscriptions over WebSocket in the GraphiQL UI!&lt;/p&gt;&lt;h3&gt;&lt;a href="#more" class="anchor" name="more"&gt;&lt;/a&gt;More&lt;/h3&gt;
+&lt;p&gt;More &lt;a href="https://github.com/spring-projects/spring-graphql/milestone/6?closed=1"&gt;improvements and fixes made their way into their release&lt;/a&gt; and they&amp;rsquo;re available right now in the new Spring for GraphQL 1.0.0-M5 release from the Spring Milestone repository.&lt;/p&gt;&lt;h3&gt;&lt;a href="#how-can-you-help" class="anchor" name="how-can-you-help"&gt;&lt;/a&gt;How can you help?&lt;/h3&gt;
+&lt;p&gt;If you&amp;rsquo;re interested in helping out, you can &lt;a href="https://docs.spring.io/spring-graphql/docs/1.0.0-M4/reference/html/#boot-graphql"&gt;get started with Spring GraphQL&lt;/a&gt; and &lt;a href="https://github.com/spring-projects/spring-graphql/issues"&gt;raise issues on our GitHub project&lt;/a&gt;.&lt;br/&gt;If you have general questions, please ask on &lt;a href="https://stackoverflow.com"&gt;stackoverflow.com&lt;/a&gt; using the &lt;a href="https://stackoverflow.com/tags/spring-graphql"&gt;&lt;code&gt;spring-graphql&lt;/code&gt; tag&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://spring.io/projects/spring-graphql/"&gt;Project Page&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-graphql"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects/spring-graphql/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-graphql/docs/1.0.0-M5/reference/html/"&gt;Documentation&lt;/a&gt; | &lt;a href="https://stackoverflow.com/questions/tagged/spring-graphql"&gt;Stack Overflow&lt;/a&gt;&lt;/p&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
+  <entry>
+    <title>Elastic and Microsoft Azure - Unified Observability for Spring Boot applications</title>
+    <link rel="alternate" href="https://spring.io/blog/2022/01/19/elastic-and-microsoft-azure-unified-observability-for-spring-boot-applications" />
+    <category term="engineering" label="Engineering" />
+    <author>
+      <name>Josh Long</name>
+    </author>
+    <id>tag:spring.io,2022-01-19:4675</id>
+    <updated>2022-01-19T13:30:00Z</updated>
+    <content type="html">&lt;p&gt;Hi, Spring fans! Today, we are excited to announce the availability of Elastic integrations for unified observability of Spring Boot applications on Azure. You can seamlessly ship Microsoft Azure Spring Cloud &lt;a href="http://aka.ms/Start-Elastic-APM"&gt;logs and metrics&lt;/a&gt; into Elastic, &lt;a href="https://docs.microsoft.com/en-us/azure/spring-cloud/how-to-elastic-apm-java-agent-monitor"&gt;instrument Spring Boot apps&lt;/a&gt;, and monitor every step of your cloud journey. And gain a holistic view across Spring Boot applications and other logs and metrics in your cloud and on-premises environments.&lt;/p&gt;
+&lt;p&gt;Over the past two years, we worked with many enterprise customers to learn about the scenarios they face. Many of these customers have thousands of Spring Boot applications running in on-premises data centers. As they migrate these applications to the cloud, they need to aggregate logs and metrics from these applications and instrument them for application performance monitoring (APM) using solutions their developers are familiar with and have been using for years. In addition, they must ensure continuity for existing server-side software that are already shipping logs and metrics and are pre-instrumented for end-to-end monitoring using systems like Elastic. You can gain deeper application visibility, reduce the time spent on root cause analysis, and provide a consistent customer experience in your web and mobile applications. A &lt;a href="https://techcommunity.microsoft.com/t5/apps-on-azure-blog/2021-report-how-developers-migrate-spring-apps-to-the-cloud/ba-p/3021421"&gt;2021 survey learnings&lt;/a&gt; also indicated that ¡°end-to-end monitoring¡± is the second biggest challenge DevOps and IT managers face as they migrate Spring Boot applications to the cloud. With the integration of Azure Spring Cloud logs and metrics in Elastic, you can streamline your journey and easily instrument your Spring Boot applications for unified observability.&lt;/p&gt;
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/KjmQX1SxZdA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
+&lt;p&gt;Elastic can now seamlessly ingest logs and metrics from Microsoft Azure Spring Cloud so that DevOps and SREs can monitor their Spring Boot applications? whether in the &lt;a href="https://www.elastic.co/observability/cloud-monitoring"&gt;cloud, on-premises or in hybrid environments&lt;/a&gt; ? and remove monitoring silos to increase operational efficiency and developer productivity. DevOps and SREs can monitor both Spring Boot logs and application metrics across all environments by automatically shipping them to Elastic. Teams can also correlate and add context to their Spring data with other observability data sets across their environments for holistic end-to-end monitoring.&lt;/p&gt;
+&lt;p&gt;¡°_Elastic is dedicated to helping organizations observe, understand, and optimize their applications and infrastructure,_¡± said &lt;strong&gt;Steve Kearns, Vice President of Product Management, Elastic&lt;/strong&gt;, &amp;ldquo;&lt;em&gt;Through this native integration between Azure Spring Cloud and the Elastic Observability solution, it&amp;rsquo;s easier than ever to bring together a unified view of your Spring Boot application, across application, infrastructure, and user data.&lt;/em&gt;&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;&lt;em&gt;Microsoft is committed to making it easier for customers to modernize their Java applications in the cloud. The expanded native integration of Elastic on Azure includes support for Azure Spring Cloud that enables customers to simply achieve end-to-end observability of their Spring Boot applications.&lt;/em&gt;&amp;rdquo;&lt;br/&gt;? &lt;strong&gt;Julia Liuson, President, Developer Division, Microsoft&lt;/strong&gt;&lt;/p&gt;&lt;h2&gt;&lt;a href="#shipping-azure-spring-cloud-logs-to-elastic" class="anchor" name="shipping-azure-spring-cloud-logs-to-elastic"&gt;&lt;/a&gt;Shipping Azure Spring Cloud logs to Elastic&lt;/h2&gt;
+&lt;p&gt;Native integration makes it seamless to ship logs to an Elastic observability solution. Once data is shipped into Elastic, you can jumpstart analysis in minutes with turnkey visualizations and dashboards.&lt;/p&gt;
+&lt;img src = "https://raw.githubusercontent.com/joshlong/blog-images/master/elastic-01-2022/Diagnostic-setting-Microsoft-Azure.png"/&gt;
+&lt;p&gt;Figure 1: Diagnostic Setting blade for Azure Spring Cloud Service.&lt;/p&gt;&lt;h2&gt;&lt;a href="#instrumenting-spring-boot-applications" class="anchor" name="instrumenting-spring-boot-applications"&gt;&lt;/a&gt;Instrumenting Spring Boot applications&lt;/h2&gt;
+&lt;p&gt;Run a &amp;ldquo;provisioning&amp;rdquo; automation for a complete hands-off experience for instrumenting and monitoring any new applications that you create and deploy using Elastic¡¯s Terraform or ARM template or Bicep. Or you can run it on-demand using the Azure CLI for greater flexibility and control.&lt;/p&gt;
+&lt;img src = "https://raw.githubusercontent.com/joshlong/blog-images/master/elastic-01-2022/azure-cli--instrument-elastic-apm.jpg"/&gt;&lt;h2&gt;&lt;a href="#analyzing-spring-boot-application-performance" class="anchor" name="analyzing-spring-boot-application-performance"&gt;&lt;/a&gt;Analyzing Spring Boot application performance&lt;/h2&gt;
+&lt;p&gt;After instrumenting and shipping logs from your Spring Boot application, you can use Elastic Observability to monitor, analyze, and search your data to keep your applications performing. You can also use the out-of-the-box Azure Spring Cloud dashboards within Elastic Observability to gain instant insights from your Azure Spring Cloud logs.&lt;/p&gt;
+&lt;img src = "https://raw.githubusercontent.com/joshlong/blog-images/master/elastic-01-2022/elastic-kibana-asc-dashboard-full.png"/&gt;
+&lt;p&gt;Figure 2: Out-of-the-box dashboards for Azure Spring Cloud Service logs in Elastic Observability.&lt;/p&gt;
+&lt;p&gt;With Elastic APM, you can analyze and search your application performance data.&lt;/p&gt;
+&lt;img src="https://raw.githubusercontent.com/joshlong/blog-images/master/elastic-01-2022/elastic-apm-service-map.PNG"/&gt;
+&lt;p&gt;Figure 3: Service Map for customer-service from Spring Petclinic Application&lt;/p&gt;
+&lt;p&gt;You can also use Elastic APM to look at JVM metrics to understand heap memory usage, system memory usage, CPU usage and other metrics that help you make evidence-based capacity planning decisions.&lt;/p&gt;
+&lt;img src="https://raw.githubusercontent.com/joshlong/blog-images/master/elastic-01-2022/elastic-apm-customer-service-jvm-metrics.png"/&gt;
+&lt;p&gt;Figure 4: JVM metrics in Elastic APM for customers-service&lt;/p&gt;
+&lt;p&gt;Utilizing the distributed tracing capabilities of Elastic APM, you can drill further into the performance of your applications to understand which transactions impact your customers the most and where in those transactions is the most time being spent.&lt;/p&gt;
+&lt;img src="https://raw.githubusercontent.com/joshlong/blog-images/master/elastic-01-2022/elastic-apm-customer-service-latency-distribution.png"/&gt;
+&lt;p&gt;Figure 5: Distributed tracing in Elastic APM for customers-service¡¯s GET owners operation.&lt;/p&gt;&lt;h2&gt;&lt;a href="#machine-learning-automatically-detects-anomalies" class="anchor" name="machine-learning-automatically-detects-anomalies"&gt;&lt;/a&gt;Machine learning automatically detects anomalies&lt;/h2&gt;
+&lt;p&gt;With Elastic¡¯s &lt;a href="https://www.elastic.co/what-is/elasticsearch-machine-learning"&gt;built-in machine learning&lt;/a&gt; capabilities, extracting new insights from your Azure Spring Cloud logs is as simple as clicking a button ? making machine learning truly operational.&lt;br/&gt;The Elastic Stack processes logs upon ingestion, ensuring that you have the metadata you need to identify root causes or add context to any event. Built-in tools like Data Visualizer help you find the jobs you are looking for and identify fields in your logs that would pair well with machine learning.&lt;br/&gt;You can derive actionable insights from your logs and APM data with the rich alerting and anomaly detection capabilities within Elastic Observability. For example, you can uncover irregular log rates, or unusual behavior in the response times of your application in Azure Spring Cloud. &lt;/p&gt;
+&lt;img src="https://raw.githubusercontent.com/joshlong/blog-images/master/elastic-01-2022/elastic-machine-learning-logs.PNG"/&gt;
+&lt;p&gt;Figure 6: Anomaly Explorer in Elastic.&lt;/p&gt;&lt;h2&gt;&lt;a href="#use-the-same-logs-to-stop-threats-at-cloud-scale" class="anchor" name="use-the-same-logs-to-stop-threats-at-cloud-scale"&gt;&lt;/a&gt;Use the same logs to stop threats at cloud scale&lt;/h2&gt;
+&lt;p&gt;Since Elastic offers a common schema and single repository, the same observability data from Spring applications and other data sets can also be used for extended detection and response (XDR) to drive mean time to detection towards zero. &lt;a href="https://www.elastic.co/security"&gt;Elastic Security&lt;/a&gt; brings together SIEM and endpoint security, allowing organizations to ingest and retain large volumes of data from diverse sources, store, and search data for longer, and augment threat hunting with detections and machine learning.&lt;/p&gt;&lt;h2&gt;&lt;a href="#focus-on-customer-value-while-microsoft-and-elastic-keep-the-lights-on" class="anchor" name="focus-on-customer-value-while-microsoft-and-elastic-keep-the-lights-on"&gt;&lt;/a&gt;Focus on customer value while Microsoft and Elastic keep the lights on&lt;/h2&gt;
+&lt;p&gt;The native integration of Elastic in Azure is the easiest and fastest way to get started with Elastic on Azure. Quickly ship your Azure Spring Cloud logs and APM data to Elastic, access any type of data, from anywhere, when you need it the most ? whether your data is on-prem, or in multi-cloud or hybrid cloud environments. This holistic view helps streamline migrating your Spring Boot applications to the cloud. Plus, Elastic Cloud &lt;a href="https://www.elastic.co/cloud/shared-responsibility"&gt;handles the security, maintenance, and upkeep&lt;/a&gt;, allowing you to drive your business forward with increased visibility, improved operations, and cyber resilience. &lt;/p&gt;&lt;h2&gt;&lt;a href="#build-your-solutions-and-monitor-them-today" class="anchor" name="build-your-solutions-and-monitor-them-today"&gt;&lt;/a&gt;Build your solutions and monitor them today!&lt;/h2&gt;
+&lt;p&gt;Azure Spring Cloud is jointly built, operated, and supported by Microsoft and VMware. It is a fully managed service for Spring Boot applications that abstracts away the complexity of infrastructure and Spring Cloud middleware management, so you can focus on building your business logic and let Azure take care of dynamic scaling, patches, security, compliance, and high availability. With a few steps, you can provision Azure Spring Cloud, create applications, deploy, and scale Spring Boot applications, and start monitoring in minutes. We will continue to bring more developer-friendly and enterprise-ready features to Azure Spring Cloud. We would love to hear how you are building impactful solutions using Azure Spring Cloud ¡¦&lt;/p&gt;
+&lt;p&gt;&lt;a href="http://aka.ms/Start-Elastic"&gt;Analyze logs and metrics&lt;/a&gt; and &lt;a href="http://aka.ms/Start-Elastic-APM"&gt;monitor&lt;/a&gt; your Spring Boot applications with Elastic!&lt;/p&gt;&lt;h2&gt;&lt;a href="#resources" class="anchor" name="resources"&gt;&lt;/a&gt;Resources&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;Learn using an &lt;a href="https://docs.microsoft.com/en-us/learn/modules/azure-spring-cloud-workshop/"&gt;MS Learn module&lt;/a&gt; or &lt;a href="https://github.com/microsoft/azure-spring-cloud-training"&gt;self-paced workshop&lt;/a&gt; on GitHub&lt;/li&gt;
+  &lt;li&gt;Learn &lt;a href="https://docs.microsoft.com/en-us/azure/spring-cloud/"&gt;more&lt;/a&gt; about implementing solutions on Azure Spring Cloud&lt;/li&gt;
+  &lt;li&gt;&lt;a href="https://github.com/Azure-Samples/spring-petclinic-microservices"&gt;Deploy&lt;/a&gt; a distributed version of Spring Petclinic application&lt;/li&gt;
+  &lt;li&gt;Deploy Spring Boot applications by leveraging enterprise best practices ? &lt;a href="https://docs.microsoft.com/en-us/azure/spring-cloud/reference-architecture"&gt;Azure Spring Cloud Reference Architecture&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;Migrate your &lt;a href="https://docs.microsoft.com/en-us/azure/developer/java/migration/migrate-spring-boot-to-azure-spring-cloud"&gt;Spring Boot&lt;/a&gt;, &lt;a href="https://docs.microsoft.com/en-us/azure/developer/java/migration/migrate-spring-cloud-to-azure-spring-cloud"&gt;Spring Cloud&lt;/a&gt;, and &lt;a href="https://docs.microsoft.com/en-us/azure/developer/java/migration/migrate-tomcat-to-azure-spring-cloud"&gt;Tomcat&lt;/a&gt; applications to Azure Spring Cloud&lt;/li&gt;
+  &lt;li&gt;Wire Spring applications to &lt;a href="https://docs.microsoft.com/en-us/azure/developer/java/spring-framework/"&gt;interact with Azure services&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;For feedback and questions, please &lt;a href="mailto:AzureSpringCloud-Talk@service.microsoft.com"&gt;e-mail us&lt;/a&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
+  </entry>
   <entry>
     <title>This Week in Spring - January 18th, 2022</title>
     <link rel="alternate" href="https://spring.io/blog/2022/01/18/this-week-in-spring-january-18th-2022" />
@@ -507,59 +617,6 @@ type Customer {&#xD;
     <updated>2021-12-23T12:00:00Z</updated>
     <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, &lt;a href="https://twitter.com/starbuxman"&gt;Josh Long (@starbuxman)&lt;/a&gt; talks to Yugabyte CTO, Apache HBase and Apache Cassandra co-founder, and distributed database legend &lt;a href="https://twitter.com/karthikr"&gt;Karthik Ranganathan&lt;/a&gt;. (Merry Christmas, if you celebrate!)&lt;/p&gt;
 &lt;iframe title="Yugabyte CEO Karthik Ranganathan" allowtransparency="true" height="150" width="100%" style="border: none; min-width: min(100%, 430px);" scrolling="no" data-name="pb-iframe-player" src="https://www.podbean.com/player-v2/?i=mckzk-11617ea-pb&amp;from=pb6admin&amp;share=1&amp;download=1&amp;rtl=0&amp;fonts=Arial&amp;skin=1&amp;font-color=&amp;btn-skin=7"&gt;&lt;/iframe&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Cloud Square 0.4.0 has been released</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/12/22/spring-cloud-square-0-4-0-has-been-released" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>Olga Maciaszek-Sharma</name>
-    </author>
-    <id>tag:spring.io,2021-12-22:4657</id>
-    <updated>2021-12-22T21:02:00Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the community, I am pleased to announce that the 0.4.0 release of &lt;a href="https://github.com/spring-projects-experimental/spring-cloud-square"&gt;Spring Cloud Square&lt;/a&gt; is available today. The release can be found in &lt;a href="https://repo.maven.apache.org/maven2/org/springframework/cloud/spring-cloud-square-dependencies/0.4.0/"&gt;Maven Central&lt;/a&gt;. You can check out the 0.4.0 &lt;a href="https://github.com/spring-projects-experimental/spring-cloud-square/releases/tag/v0.4.0"&gt;release notes for more information&lt;/a&gt;.&lt;/p&gt;&lt;h2&gt;&lt;a href="#notable-changes-in-0-4-0" class="anchor" name="notable-changes-in-0-4-0"&gt;&lt;/a&gt;Notable changes in 0.4.0:&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;Spring Native support adjustments for non-load-balanced use-cases (&lt;a href="https://github.com/spring-cloud-incubator/spring-cloud-square/pull/23"&gt;PR&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;Support for configuring different WebClient.Builder beans (not shared) for each &lt;code&gt;@RetrofitClient&lt;/code&gt; instance (&lt;a href="https://github.com/spring-cloud-incubator/spring-cloud-square/pull/30"&gt;PR&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;Spring Cloud Sleuth integration for OkHttpClient &lt;a href="https://github.com/spring-projects-experimental/spring-cloud-square/issues/36"&gt;#36&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The documentation for this release can be found &lt;a href="https://spring-projects-experimental.github.io/spring-cloud-square/docs/current/reference/html/index.html"&gt;here&lt;/a&gt;.&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Native 0.11.1 available now</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/12/22/spring-native-0-11-1-available-now" />
-    <category term="releases" label="Releases" />
-    <author>
-      <name>St?phane Nicoll</name>
-    </author>
-    <id>tag:spring.io,2021-12-22:4656</id>
-    <updated>2021-12-22T08:01:32Z</updated>
-    <content type="html">&lt;p&gt;On behalf of the team and everyone who has contributed, I&amp;rsquo;m happy to announce that Spring Native &lt;code&gt;0.11.1&lt;/code&gt; has been released and is now available from &lt;a href="https://repo.spring.io/release"&gt;https://repo.spring.io/release&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;This release includes &lt;a href="https://github.com/spring-projects-experimental/spring-native/releases/tag/0.11.1"&gt;13 bug fixes, documentation improvements, and dependency upgrades&lt;/a&gt;. Thanks to all those who have contributed with issue reports and pull requests.&lt;/p&gt;
-&lt;p&gt;&lt;a href="https://github.com/spring-projects-experimental/spring-native"&gt;GitHub&lt;/a&gt; | &lt;a href="https://github.com/spring-projects-experimental/spring-native/issues"&gt;Issues&lt;/a&gt; | &lt;a href="https://docs.spring.io/spring-native/docs/0.11.1/reference/htmlsingle/"&gt;Documentation&lt;/a&gt;&lt;/p&gt;
-&lt;!-- rendered by Sagan Renderer Service --&gt;</content>
-  </entry>
-  <entry>
-    <title>Spring Tips: @Controllers: Wrap Up</title>
-    <link rel="alternate" href="https://spring.io/blog/2021/12/22/spring-tips-controllers-wrap-up" />
-    <category term="engineering" label="Engineering" />
-    <author>
-      <name>Josh Long</name>
-    </author>
-    <id>tag:spring.io,2021-12-18:4649</id>
-    <updated>2021-12-22T08:00:00Z</updated>
-    <content type="html">&lt;p&gt;Hi, Spring fans! In this installment, we conclude our tour of all things @Controller and look at how to distinguish one controller from another with the judicious use of Spring&amp;rsquo;s stereotype annotations.&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=m0K3ElazGE0&amp;list=PLgGXSWYM2FpPw8rV0tZoMiJYSCiLhPnOc&amp;index=5"&gt;WebSockets&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=hUBrFekxn0Y&amp;list=PLgGXSWYM2FpPw8rV0tZoMiJYSCiLhPnOc&amp;index=8"&gt;MVC&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=V9KVOHkcxPo&amp;list=PLgGXSWYM2FpPw8rV0tZoMiJYSCiLhPnOc&amp;index=7"&gt;REST&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=eVqmB2hsIVk&amp;list=PLgGXSWYM2FpPw8rV0tZoMiJYSCiLhPnOc&amp;index=2"&gt;RSocket&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href="https://www.youtube.com/watch?v=eVqmB2hsIVk&amp;list=PLgGXSWYM2FpPw8rV0tZoMiJYSCiLhPnOc&amp;index=2"&gt;GraphQL&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Happy holidays and happy new year! &lt;/p&gt;
-&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/xhNGqTwsGw0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen&gt;&lt;/iframe&gt;
 &lt;!-- rendered by Sagan Renderer Service --&gt;</content>
   </entry>
 </feed>
